@@ -184,6 +184,28 @@ or when a user mouses over the chat */
   background: #eee;
 }
 
+#chat-form {
+  display: grid;
+  grid: 40px / 32px 1fr;
+  grid-area: chat-form;
+  grid-gap: 15px;
+  align-content: center;
+  align-items: center;
+  border-radius: 0 0 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding-left: 42px;
+  padding-right: 20px;
+}
+
+#chat-form input {
+  outline: none;
+  padding: 10px;
+  border: 0px solid #ddd;
+  color: #330;
+  border-radius: 6px;
+  font-size: 1.6rem;
+}
+
 #chat-title {
   align-content: center;
   align-items: center;
@@ -265,28 +287,6 @@ or when a user mouses over the chat */
 .their-message .message-content {
   grid-template-columns: 48px 1fr;
   grid-column-gap: 15px;
-}
-
-#chat-form {
-  display: grid;
-  grid: 40px / 32px 1fr;
-  grid-area: chat-form;
-  grid-gap: 15px;
-  align-content: center;
-  align-items: center;
-  border-radius: 0 0 10px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
-  padding-left: 42px;
-  padding-right: 20px;
-}
-
-#chat-form input {
-  outline: none;
-  padding: 10px;
-  border: 0px solid #ddd;
-  color: #330;
-  border-radius: 6px;
-  font-size: 1.6rem;
 }
 
 .image-upload > input {
