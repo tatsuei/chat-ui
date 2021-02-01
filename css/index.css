@@ -318,14 +318,10 @@ or when a user mouses over the chat */
 /* Scrolling progress bar */
 #chat-message-list::-webkit-scrollbar-track {
   box-shadow: inset 0 0 10px rgba(0,0,0,0.3); 
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
 }
 
 /* Draggable scrolling handle */
 #chat-message-list::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
   background: #190061; 
   box-shadow: inset 0 0 2px rgba(0,0,0,0.5); 
   visibility:hidden;
@@ -333,6 +329,10 @@ or when a user mouses over the chat */
 
 #chat-message-list:hover::-webkit-scrollbar-thumb {
   visibility:visible;
+}
+
+#chat-message-list::-webkit-scrollbar-track-piece {
+  visibility: hidden;
 }
 
 /* Left scrollbar (conversation list) */
@@ -343,14 +343,10 @@ or when a user mouses over the chat */
 /* Scrolling progress bar */
 #conversation-list::-webkit-scrollbar-track {
   box-shadow: inset 0 0 10px rgba(0,0,0,0.3); 
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
 }
 
 /* Draggable scrolling handle */
 #conversation-list::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
   background: #876cd8; 
   box-shadow: inset 0 0 2px rgba(0,0,0,0.5); 
   visibility: hidden;
@@ -359,4 +355,8 @@ or when a user mouses over the chat */
 /* Making the scrollbar visible when mousing over it */
 #conversation-list:hover::-webkit-scrollbar-thumb {
   visibility:visible;
+}
+
+#conversation-list::-webkit-scrollbar-track-piece {
+  visibility: hidden;
 }
