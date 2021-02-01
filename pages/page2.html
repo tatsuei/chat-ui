@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Chat UI Demo</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/index.css" />
+</head>
+
+<body>
+  <script>
+    function myFunction() {
+      alert("Deleting chats is still in the works... Please hold!");
+    }
+  </script>
+  <div id="chats-container">
+    <div id="searchbar-container">
+      <input type="text" placeholder="Search messages..." />
+    </div>
+    <div id="conversation-list">
+      <a href="../index.html">
+        <div class="conversation">
+          <img src="../images/profiles/cal.png" alt="Cal K" />
+          <div class="title-text">
+            Cal
+          </div>
+          <div class="created-date">
+            Today
+          </div>
+          <div class="conversation-message">
+            Ey man when we gonna meet up?
+          </div>
+        </div>
+      </a>
+      <a href="page2.html">
+        <div class="conversation">
+          <img src="../images/profiles/gary.png" alt="Gary" />
+          <div class="title-text">
+            Gary
+          </div>
+          <div class="created-date">
+            Yesterday
+          </div>
+          <div class="conversation-message">
+            Yo last night was crazy!
+          </div>
+        </div>
+      </a>
+      <a href="page3.html">
+        <div class="conversation">
+          <img src="../images/profiles/ariel.png" alt="Gary" />
+          <div class="title-text">
+            Ariel
+          </div>
+          <div class="created-date">
+            Yesterday
+          </div>
+          <div class="conversation-message">
+            Hello! Demo of a chat app UI!
+          </div>
+        </div>  
+      </a>
+      <a href="page4.html">
+        <div class="conversation">
+          <img src="../images/profiles/john.png" alt="Gary" />
+          <div class="title-text">
+            John
+          </div>
+          <div class="created-date">
+            Two days ago
+          </div>
+          <div class="conversation-message">
+            Hello! Demo of a chat app UI!
+          </div>
+        </div>
+      </a>
+      <a href="page5.html">
+        <div class="conversation">
+          <img src="../images/profiles/christina.png" alt="Gary" />
+          <div class="title-text">
+            Christina
+          </div>
+          <div class="created-date">
+            26 January 2021
+          </div>
+          <div class="conversation-message">
+            Hello! Demo of a chat app UI!
+          </div>
+        </div>  
+      </a>
+      <a href="page6.html">
+        <div class="conversation">
+          <img src="../images/profiles/juan.png" alt="Gary" />
+          <div class="title-text">
+            Juan
+          </div>
+          <div class="created-date">
+            26 January 2021
+          </div>
+          <div class="conversation-message">
+            Hello! Demo of a chat app UI!
+          </div>
+        </div>  
+      </a>
+      <a href="page7.html">
+        <div class="conversation">
+          <img src="../images/profiles/lydia.png" alt="Gary" />
+          <div class="title-text">
+            Lydia
+          </div>
+          <div class="created-date">
+            25 January 2021
+          </div>
+          <div class="conversation-message">
+            Hello! Demo of a chat app UI!
+          </div>
+        </div>  
+      </a>
+      <a href="page8.html">
+        <div class="conversation">
+          <img src="../images/profiles/siobhan.png" alt="Gary" />
+          <div class="title-text">
+            Siobhan
+          </div>
+          <div class="created-date">
+            23 January 2021
+          </div>
+          <div class="conversation-message">
+            Hello! Demo of a chat app UI!
+          </div>
+        </div>  
+      </a>
+      <a href="page9.html">
+        <div class="conversation">
+          <img src="../images/profiles/jules.png" alt="Gary" />
+          <div class="title-text">
+            Jules
+          </div>
+          <div class="created-date">
+            20 January 2021
+          </div>
+          <div class="conversation-message">
+            Hello! Demo of a chat app UI!
+          </div>
+        </div>  
+      </a>
+    </div>
+    <!-- Placeholder for "New message" button -->
+    <div id="new-message-container">
+      <a href="#"></a>
+    </div>
+    <div id="chat-title">
+      <span>Gary</span>
+      <div class="delete-chat">
+        <button class="button" onclick="myFunction()">
+        </button>
+      </div>     
+    </div>
+    <div id="chat-message-list">
+      <div class="message-row their-message">
+        <div class="message-content">
+          <img src='../images/profiles/gary.png' alt='Gary'/>
+          <div class="message-text">
+            Hey dude! Wanna go get something to eat before the movies? I'm feeling pretty hungry.
+          </div>
+          <div class="message-time">January 29</div>  
+        </div>
+      </div>
+      <div class="message-row my-message">
+        <div class="message-content">
+          <div class="message-text">
+            Aye sure man! Whatcha wanna get?
+          </div>
+          <div class="message-time">January 29</div>  
+        </div>
+      </div>
+      <div class="message-row their-message">
+        <div class="message-content">
+          <img src='../images/profiles/gary.png' alt='Gary'/>
+          <div class="message-text">
+            I was thinking of getting some shawarma, the one with the melty cheese all over it?
+            Also gonna grab a ton of their garlic sauce!
+          </div>
+          <div class="message-time">January 29</div>  
+        </div>
+      </div>
+      <div class="message-row my-message">
+        <div class="message-content">
+          <div class="message-text">
+            Oh man. The thought of melty cheese is making me drool.
+          </div>
+          <div class="message-time">January 29</div>  
+        </div>
+      </div>
+      <div class="message-row their-message">
+        <div class="message-content">
+          <img src='../images/profiles/gary.png' alt='Gary'/>
+          <div class="message-text">
+            I know right? What time you wanna meet up?
+          </div>
+          <div class="message-time">January 29</div>  
+        </div>
+      </div>
+      <div class="message-row my-message">
+        <div class="message-content">
+          <div class="message-text">
+            Hmm. Let's say around 8pm? They should be open by then, right? What with the lockdown 
+            in place and all.
+          </div>
+          <div class="message-time">January 29</div>  
+        </div>
+      </div>
+      <div class="message-row their-message">
+        <div class="message-content">
+          <img src='../images/profiles/gary.png' alt='Gary'/>
+          <div class="message-text">
+            Yeah, I think they are. But just to be safe, I'm gonna ring 'em up and ask.
+          </div>
+          <div class="message-time">January 29</div>  
+        </div>
+      </div>
+      <div class="message-row my-message">
+        <div class="message-content">
+          <div class="message-text">
+            Alright bro, see you at the spot then! Do lmk if they're not open yeah?
+          </div>
+          <div class="message-time">January 29</div>  
+        </div>
+      </div>
+      <div class="message-row their-message">
+        <div class="message-content">
+          <img src='../images/profiles/gary.png' alt='Gary'/>
+          <div class="message-text">
+            Nah man you know me, I'll definitely give you a heads up lul.
+          </div>
+          <div class="message-time">January 29</div>  
+        </div>
+      </div>
+      <div class="message-row my-message">
+        <div class="message-content">
+          <div class="message-text">Cheers to that!</div>
+          <div class="message-time">January 29</div>  
+        </div>
+      </div>
+    </div>
+    <div id="chat-form">
+      <!-- Attach files by clicking the paperclip icon -->
+      <div class="image-upload"> 
+        <label for="file-input">
+          <img src="../images/icons/attachment.svg" alt="Attach Files"/>
+        </label>
+        <input id="file-input" type="file"/>  
+      </div>
+      <input type="text" placeholder="Type your thoughts here!" />
+    </div>
+</body>
+
+</html>
