@@ -193,8 +193,8 @@ or when a user mouses over the chat */
   align-items: center;
   border-radius: 0 0 10px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.25);
-  padding-left: 42px;
-  padding-right: 42px;
+  padding-left: 22px;
+  padding-right: 56px;
 }
 
 #chat-form input {
