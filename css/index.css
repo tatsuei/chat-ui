@@ -82,7 +82,7 @@ body {
   padding: 0 10px 0 36px;
   font-family: montserratRegular;
   font-size: 1.3rem;
-  background: url('../images/search.svg') no-repeat rgba(255, 255, 255, 0.3);
+  background: url('../images/icons/search.svg') no-repeat rgba(255, 255, 255, 0.3);
   background-position: 10px center;
   background-size: 20px 20px;
 }
