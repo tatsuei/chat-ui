@@ -335,10 +335,6 @@ or when a user mouses over the chat */
   visibility:visible;
 }
 
-#chat-message-list::-webkit-scrollbar-track-piece {
-  visibility: hidden;
-}
-
 /* Left scrollbar (conversation list) */
 #conversation-list::-webkit-scrollbar {
   width: 10px;
@@ -363,8 +359,4 @@ or when a user mouses over the chat */
 /* Making the scrollbar visible when mousing over it */
 #conversation-list:hover::-webkit-scrollbar-thumb {
   visibility:visible;
-}
-
-#conversation-list::-webkit-scrollbar-track-piece {
-  visibility: hidden;
 }
