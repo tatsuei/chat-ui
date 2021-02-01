@@ -189,12 +189,13 @@ or when a user mouses over the chat */
   grid: 40px / 32px 1fr;
   grid-area: chat-form;
   grid-gap: 15px;
+  grid-template-columns: 30px 535px 5px;
   align-content: center;
   align-items: center;
   border-radius: 0 0 10px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.25);
   padding-left: 22px;
-  padding-right: 56px;
+  padding-right: 22px;
 }
 
 #chat-form input {
