@@ -1,11 +1,4 @@
-/* CSS for all HTML divs */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
+/* Custom fonts */
 @font-face {
   font-family: montserratRegular;
   src: url("../fonts/montserrat-regular.ttf");
@@ -16,8 +9,23 @@
   src: url("../fonts/montserrat-bold.ttf");
 }
 
+/* CSS for all HTML divs */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Alignment of body content */
+body {
+  display: grid;
+  place-items: center;
+}
+
 /* Height for HTML and body divs */
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -29,10 +37,11 @@ html {
   font-size: 10px;
 }
 
-/* Alignment of body content */
-body {
-  display: grid;
-  place-items: center;
+/* Default 'theme'/background colour for the UI */
+#conversation-list,
+#new-message-container,
+#searchbar-container {
+  background: #190061;
 }
 
 /* Containers */
@@ -40,31 +49,58 @@ body {
 #chats-container {
   display: grid;
   grid:
-  'searchbar-container chat-title' 70px
-  'conversation-list chat-message-list' 1fr
-  'new-message-container chat-form' 80px
-  / 330px 1fr;
+    "searchbar-container chat-title" 70px
+    "conversation-list chat-message-list" 1fr
+    "new-message-container chat-form" 80px
+    / 330px 1fr;
   min-width: 800px;
   max-width: 1000px;
   max-height: 800px;
   width: 100%;
   height: 95vh;
-  background: #FFF;
+  background: #fff;
   border-radius: 10px;
 }
 
-/* Default 'theme'/background colour for the UI */
-#searchbar-container,
-#conversation-list,
-#new-message-container {
-  background: #190061;
+/* Styling each class of 'conversation' */
+.conversation {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 40px 1fr max-content;
+  color: #ddd;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #002c88;
+  padding: 20px 20px 20px 15px;
+}
+
+/* Style for when a chat is selected, 
+or when a user mouses over the chat */
+.conversation.active,
+.conversation:hover {
+  background: #002c88;
+}
+
+.conversation:hover {
+  cursor: pointer;
+}
+
+.conversation > img {
+  border-radius: 50%;
+  grid-row: span 2;
+  width: 50px;
+  height: 50px;
+}
+
+#conversation-list {
+  grid-area: conversation-list;
+  overflow-y: scroll;
 }
 
 /* Styling the search bar */
 #searchbar-container {
   align-items: center;
   border-radius: 10px 0 0 0;
-  box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.75);
   display: grid;
   grid-area: searchbar-container;
   padding: 0 20px;
@@ -82,7 +118,8 @@ body {
   padding: 0 10px 0 36px;
   font-family: montserratRegular;
   font-size: 1.3rem;
-  background: url('../images/icons/search.svg') no-repeat rgba(255, 255, 255, 0.3);
+  background: url("../images/icons/search.svg") no-repeat
+    rgba(255, 255, 255, 0.3);
   background-position: 10px center;
   background-size: 20px 20px;
 }
@@ -91,40 +128,6 @@ body {
 #searchbar-container input::placeholder {
   color: #ddd;
   font-weight: bold;
-}
-/* End Containers */
-
-#conversation-list {
-  grid-area: conversation-list;
-  overflow-y: scroll;
-}
-
-/* Styling each class of 'conversation' */
-.conversation {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 40px 1fr max-content;
-  color: #ddd;
-  font-size: 1.3rem;
-  border-bottom: 1px solid #002C88;
-  padding: 20px 20px 20px 15px;
-}
-
-/* Style for when a chat is selected, 
-or when a user mouses over the chat */
-.conversation.active, .conversation:hover {
-  background: #002C88;
-}
-
-.conversation:hover {
-  cursor: pointer;
-}
-
-.conversation > img {
-  border-radius: 50%;
-  grid-row: span 2;
-  width: 50px;
-  height: 50px;
 }
 
 .message-content > img {
@@ -153,7 +156,7 @@ or when a user mouses over the chat */
   padding-left: 5px;
   overflow-x: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 #new-message-container {
@@ -161,7 +164,7 @@ or when a user mouses over the chat */
   grid: 40px / 40px;
   align-content: center;
   grid-area: new-message-container;
-  border-top: 1px solid rgba(0,0,0,0.25);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 0 0 0 10px;
   padding: 0 15px;
 }
@@ -171,7 +174,7 @@ or when a user mouses over the chat */
   place-content: center center;
   /* background: #eee; */
   border-radius: 100%;
-  color: #002C88;
+  color: #002c88;
   text-decoration: none;
   font-size: 3.6rem;
 }
@@ -185,12 +188,12 @@ or when a user mouses over the chat */
   align-content: center;
   align-items: center;
   border-radius: 0 10px 0 0;
-  box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
-  color: #0048AA;
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.75);
+  color: #0048aa;
   display: grid;
   font-family: montserratBold;
   font-weight: bold;
-  font-size: 2.0rem;
+  font-size: 2rem;
   grid: 36px / 1fr 36px;
   grid-area: chat-title;
   padding: 0 20px;
@@ -241,10 +244,6 @@ or when a user mouses over the chat */
   justify-items: end;
 }
 
-.my-message {
-  justify-items: end;
-}
-
 .my-message .message-content {
   justify-items: end;
 }
@@ -276,7 +275,7 @@ or when a user mouses over the chat */
   align-content: center;
   align-items: center;
   border-radius: 0 0 10px 0;
-  border-top: 1px solid rgba(0,0,0,0.25);
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
   padding-left: 42px;
   padding-right: 20px;
 }
