@@ -1,0 +1,310 @@
+/* CSS for all HTML divs */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: montserratRegular;
+  src: url("../fonts/montserrat-regular.ttf");
+}
+
+@font-face {
+  font-family: montserratBold;
+  src: url("../fonts/montserrat-bold.ttf");
+}
+
+/* Height for HTML and body divs */
+html, body {
+  height: 100%;
+}
+
+/* Setting the background colour, font styles */
+html {
+  background-color: #f9c5d1;
+  background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+/* Alignment of body content */
+body {
+  display: grid;
+  place-items: center;
+}
+
+/* Containers */
+/* A container for chat-related divs */
+#chats-container {
+  display: grid;
+  grid:
+  'searchbar-container chat-title' 70px
+  'conversation-list chat-message-list' 1fr
+  'new-message-container chat-form' 80px
+  / 330px 1fr;
+  min-width: 800px;
+  max-width: 1000px;
+  max-height: 800px;
+  width: 100%;
+  height: 95vh;
+  background: #FFF;
+  border-radius: 10px;
+}
+
+/* Default 'theme'/background colour for the UI */
+#searchbar-container,
+#conversation-list,
+#new-message-container {
+  background: #190061;
+}
+
+/* Styling the search bar */
+#searchbar-container {
+  align-items: center;
+  border-radius: 10px 0 0 0;
+  box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+  display: grid;
+  grid-area: searchbar-container;
+  padding: 0 20px;
+  z-index: 1; /* Stack order of the search bar */
+}
+
+/* Styling search bar's user input */
+#searchbar-container input {
+  color: #eee;
+  outline: none;
+  font-weight: bold;
+  border-radius: 10px;
+  height: 30px;
+  border: 0;
+  padding: 0 10px 0 36px;
+  font-family: montserratRegular;
+  font-size: 1.3rem;
+  background: url('../images/search.svg') no-repeat rgba(255, 255, 255, 0.3);
+  background-position: 10px center;
+  background-size: 20px 20px;
+}
+
+/* Styling the default searchbar text */
+#searchbar-container input::placeholder {
+  color: #ddd;
+  font-weight: bold;
+}
+/* End Containers */
+
+#conversation-list {
+  grid-area: conversation-list;
+  overflow-y: scroll;
+}
+
+/* Styling each class of 'conversation' */
+.conversation {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 40px 1fr max-content;
+  color: #ddd;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #002C88;
+  padding: 20px 20px 20px 15px;
+}
+
+/* Style for when a chat is selected, 
+or when a user mouses over the chat */
+.conversation.active, .conversation:hover {
+  background: #002C88;
+}
+
+.conversation:hover {
+  cursor: pointer;
+}
+
+.conversation > img {
+  border-radius: 50%;
+  grid-row: span 2;
+  width: 50px;
+  height: 50px;
+}
+
+.message-content > img {
+  border-radius: 50%;
+  grid-row: span 2;
+  width: 50px;
+  height: 50px;
+}
+
+.title-text {
+  color: #eee;
+  font-weight: bold;
+  padding-left: 5px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.created-date {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.conversation-message {
+  grid-column: span 2;
+  padding-left: 5px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+}
+
+#new-message-container {
+  display: grid;
+  grid: 40px / 40px;
+  align-content: center;
+  grid-area: new-message-container;
+  border-top: 1px solid rgba(0,0,0,0.25);
+  border-radius: 0 0 0 10px;
+  padding: 0 15px;
+}
+
+#new-message-container a {
+  display: grid;
+  place-content: center center;
+  /* background: #eee; */
+  border-radius: 100%;
+  color: #002C88;
+  text-decoration: none;
+  font-size: 3.6rem;
+}
+
+#chat-title,
+#chat-form {
+  background: #eee;
+}
+
+#chat-title {
+  align-content: center;
+  align-items: center;
+  border-radius: 0 10px 0 0;
+  box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+  color: #0048AA;
+  display: grid;
+  font-family: montserratBold;
+  font-weight: bold;
+  font-size: 2.0rem;
+  grid: 36px / 1fr 36px;
+  grid-area: chat-title;
+  padding: 0 20px;
+}
+
+/* For every image in the chat-title div 
+'>' is a child selector */
+#chat-title > img {
+  cursor: pointer;
+}
+
+#chat-message-list {
+  display: flex;
+  flex-direction: column;
+  grid-area: chat-message-list;
+  overflow-y: scroll;
+  padding: 0 20px;
+}
+
+.message-content {
+  display: grid;
+}
+
+.message-row {
+  display: grid;
+  grid-template-columns: 70%;
+  margin-bottom: 20px;
+}
+
+.message-row img {
+  border-radius: 100%;
+  grid-row: span 2;
+}
+
+.message-text {
+  padding: 9px 14px;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.message-time {
+  font-size: 1.3rem;
+  color: #777;
+}
+
+.my-message {
+  justify-content: end;
+  justify-items: end;
+}
+
+.my-message {
+  justify-items: end;
+}
+
+.my-message .message-content {
+  justify-items: end;
+}
+
+.my-message .message-text {
+  background: #190061;
+  color: #eee;
+  border: 1px solid #190061;
+  border-radius: 14px 14px 0 14px;
+}
+
+.their-message .message-text {
+  background: #eee;
+  color: #111;
+  border: 1px solid #ddd;
+  border-radius: 14px 14px 14px 0;
+}
+
+.their-message .message-content {
+  grid-template-columns: 48px 1fr;
+  grid-column-gap: 15px;
+}
+
+#chat-form {
+  display: grid;
+  grid: 40px / 32px 1fr;
+  grid-area: chat-form;
+  grid-gap: 15px;
+  align-content: center;
+  align-items: center;
+  border-radius: 0 0 10px 0;
+  border-top: 1px solid rgba(0,0,0,0.25);
+  padding-left: 42px;
+  padding-right: 20px;
+}
+
+#chat-form input {
+  outline: none;
+  padding: 10px;
+  border: 0px solid #ddd;
+  color: #330;
+  border-radius: 6px;
+  font-size: 1.6rem;
+}
+
+.image-upload > input {
+  display: none;
+}
+
+.button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-image: url(../images/icons/trash.svg);
+  background-position: center;
+  border: none;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
