@@ -305,6 +305,11 @@ or when a user mouses over the chat */
   outline: none;
 }
 
+.message-picture img {
+  position: relative;
+  width: 300px;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
