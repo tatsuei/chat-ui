@@ -3,7 +3,7 @@ Inspiration heavily drawn from Daryl Duckmanton's How To Build a Chat App UI vid
 
 Vectorised avatar images courtesy of @studiogstock over on [Freepik](https://www.freepik.com/studiogstock)
 
-This was initially a challenge posed by an interviewer, and now serves as an experimental app for learning CSS styling and JS scripts for responsiveness.
+This was initially a challenge posed by an interviewer, and now serves as an experimental app for learning CSS styling and JS for responsiveness.
 
 ## Planned features
 
